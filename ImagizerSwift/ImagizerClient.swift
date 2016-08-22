@@ -8,19 +8,24 @@
 import Foundation
 
 public class ImagizerClient {
-    public var host:String
-    public var useHttps:Bool
+    private var host:String
+    private var useHttps:Bool = false
     public var autoDpr:Bool = false
     public var dpr:Double = 1
 
     public init(host: String) {
-        self.host = host
-        self.useHttps = false
-    }
-    
-    public init(host: String, useHttps:Bool) {
-        self.host = host
-        self.useHttps = useHttps
+        // parse as NSURL to find if a scheme was passed
+        // if not scheme was found use default http
+        if let url = NSURL(string: host) {
+            if url.scheme == "https" {
+                self.useHttps = true
+            }
+            
+            self.host = url.absoluteString.stringByReplacingOccurrencesOfString(url.scheme + "://", withString: "")
+            
+        } else {
+            self.host = host
+        }
     }
     
     public func buildUrl(path:String, params: [String: AnyObject]) -> NSURL {
@@ -45,7 +50,7 @@ public class ImagizerClient {
         return components.URL!
     }
     
-    func handleQuery(params:[String: AnyObject]) -> [NSURLQueryItem] {
+    private func handleQuery(params:[String: AnyObject]) -> [NSURLQueryItem] {
         var urlParams = [NSURLQueryItem]()
         
         for (name, value) in params {
