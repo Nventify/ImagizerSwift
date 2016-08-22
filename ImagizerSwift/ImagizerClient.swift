@@ -3,41 +3,27 @@
 //  ImagizerSwift
 //
 //  Created by Nicholas Pettas on 8/16/16.
-//  Copyright © 2016 Nicholas Pettas. All rights reserved.
 //
 
 import Foundation
 
 public class ImagizerClient {
     public var host:String
-    private var useHttps:Bool
-    private var autoDpr:Bool
-    
+    public var useHttps:Bool
+    public var autoDpr:Bool = false
+    public var dpr:Double = 1
+
     public init(host: String) {
         self.host = host
         self.useHttps = false
-        self.autoDpr = true
     }
     
     public init(host: String, useHttps:Bool) {
         self.host = host
         self.useHttps = useHttps
-        self.autoDpr = true
     }
     
-    public init(host: String, autoDpr:Bool) {
-        self.host = host
-        self.autoDpr = autoDpr
-        self.useHttps = false
-    }
-    
-    public init(host: String, useHttps:Bool, autoDpr:Bool) {
-        self.host = host
-        self.useHttps = useHttps
-        self.autoDpr = autoDpr
-    }
-    
-    public func makeUrl(path:String, params: [String: String]) -> NSURL {
+    public func buildUrl(path:String, params: [String: AnyObject]) -> NSURL {
         let components = NSURLComponents.init()
         
         var localParams = params
@@ -45,8 +31,11 @@ public class ImagizerClient {
         components.host = self.host
         components.path = path
         
-        if localParams["dpr"] == nil {
-            localParams["dpr"] = String(getScreenMultiplier())
+        // determine the device pixel ratio
+        // by default Imagizer uses 1, so no need to pass 1
+        let dpr = (self.getScreenMultiplier())
+        if dpr != 1 {
+            localParams["dpr"] = String(format: "%g", dpr)
         }
 
         if localParams.count > 0 {
@@ -56,17 +45,27 @@ public class ImagizerClient {
         return components.URL!
     }
     
-    func handleQuery(params:[String: String]) -> [NSURLQueryItem] {
+    func handleQuery(params:[String: AnyObject]) -> [NSURLQueryItem] {
         var urlParams = [NSURLQueryItem]()
         
         for (name, value) in params {
-            urlParams.append(NSURLQueryItem(name: name, value: value))
+            urlParams.append(NSURLQueryItem(name: name, value: String(value)))
         }
+        
+        // sort array to ensure consistence results
+        // for caching on imagizer and unit tests
+        urlParams.sortInPlace{ $0.name < $1.name }
         
         return urlParams
     }
     
-    public func getScreenMultiplier() -> Int {
-        return Int(UIScreen.mainScreen().scale)
+    private func getScreenMultiplier() -> Double {
+        var dpr =  self.dpr
+        
+        if self.autoDpr {
+            dpr = Double(UIScreen.mainScreen().scale)
+        }
+        
+        return dpr
     }
 }
