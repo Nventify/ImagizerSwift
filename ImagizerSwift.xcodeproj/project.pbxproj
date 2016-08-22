@@ -11,6 +11,7 @@
 		01E7D6991D63CC6F009BB083 /* ImagizerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D6931D63C611009BB083 /* ImagizerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01E7D6D81D63E31B009BB083 /* ImagizerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */; };
 		01E7D6DA1D63E31B009BB083 /* ImagizerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D6881D63BD25009BB083 /* ImagizerSwift.framework */; };
+		01E7D6E51D6BC24A009BB083 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6E41D6BC24A009BB083 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +29,10 @@
 		01E7D6931D63C611009BB083 /* ImagizerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagizerSwift.h; path = ImagizerSwift/ImagizerSwift.h; sourceTree = SOURCE_ROOT; };
 		01E7D6951D63C61B009BB083 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImagizerSwift/Info.plist; sourceTree = SOURCE_ROOT; };
 		01E7D6971D63C831009BB083 /* ImagizerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagizerClient.swift; sourceTree = "<group>"; };
-		01E7D6A01D63DEAC009BB083 /* BuildUrlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildUrlTests.swift; path = ../ImagizerSwift/BuildUrlTests.swift; sourceTree = "<group>"; };
 		01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagizerSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagizerSwiftTests.swift; sourceTree = "<group>"; };
 		01E7D6D91D63E31B009BB083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E7D6E41D6BC24A009BB083 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 				01E7D6951D63C61B009BB083 /* Info.plist */,
 				01E7D6931D63C611009BB083 /* ImagizerSwift.h */,
 				01E7D6971D63C831009BB083 /* ImagizerClient.swift */,
+				01E7D6E41D6BC24A009BB083 /* Config.swift */,
 			);
 			path = ImagizerSwift;
 			sourceTree = "<group>";
@@ -84,7 +86,6 @@
 		01E7D6D61D63E31B009BB083 /* ImagizerSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				01E7D6A01D63DEAC009BB083 /* BuildUrlTests.swift */,
 				01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */,
 				01E7D6D91D63E31B009BB083 /* Info.plist */,
 			);
@@ -113,6 +114,7 @@
 				01E7D6841D63BD25009BB083 /* Frameworks */,
 				01E7D6851D63BD25009BB083 /* Headers */,
 				01E7D6861D63BD25009BB083 /* Resources */,
+				01E7D6E01D64080E009BB083 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,6 +132,7 @@
 				01E7D6D11D63E31B009BB083 /* Sources */,
 				01E7D6D21D63E31B009BB083 /* Frameworks */,
 				01E7D6D31D63E31B009BB083 /* Resources */,
+				01E7D6E11D640873009BB083 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E7D6981D63C831009BB083 /* ImagizerClient.swift in Sources */,
+				01E7D6E51D6BC24A009BB083 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +325,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ImagizerSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -339,6 +347,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ImagizerSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -396,6 +408,7 @@
 				01E7D6DF1D63E31B009BB083 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

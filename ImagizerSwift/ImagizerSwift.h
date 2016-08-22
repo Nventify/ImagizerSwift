@@ -3,7 +3,6 @@
 //  ImagizerSwift
 //
 //  Created by Nicholas Pettas on 8/16/16.
-//  Copyright © 2016 Nicholas Pettas. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
