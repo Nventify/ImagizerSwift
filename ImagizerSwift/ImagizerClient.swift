@@ -11,8 +11,9 @@ public class ImagizerClient {
     private var host:String
     private var useHttps:Bool = false
     public var autoDpr:Bool = false
-    public var dpr:Double = 1
-
+    public var dpr:Double = Config.defaultDpr
+    public var quality:Int = Config.defaultQuality
+    
     public init(host: String) {
         // parse as NSURL to find if a scheme was passed
         // if not scheme was found use default http
@@ -39,8 +40,12 @@ public class ImagizerClient {
         // determine the device pixel ratio
         // by default Imagizer uses 1, so no need to pass 1
         let dpr = (self.getScreenMultiplier())
-        if dpr != 1 {
+        if localParams["dpr"] == nil && dpr != Config.defaultDpr {
             localParams["dpr"] = String(format: "%g", dpr)
+        }
+        
+        if localParams["quality"] == nil && self.quality != Config.defaultQuality {
+            localParams["quality"] = self.quality
         }
 
         if localParams.count > 0 {

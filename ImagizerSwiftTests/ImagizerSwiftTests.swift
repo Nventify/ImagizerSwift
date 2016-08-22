@@ -28,6 +28,22 @@ class ImagizerSwiftTests: XCTestCase {
         XCTAssert(url.absoluteString == expected)
     }
     
+    func testBuildUrlHttp() {
+        let client = ImagizerClient(host: "http://example.com")
+        let url = client.buildUrl("/image.jpg", params: ["width": 100])
+        print(url)
+        let expected = "http://example.com/image.jpg?width=100"
+        XCTAssert(url.absoluteString == expected)
+    }
+    
+    func testBuildUrlHttps() {
+        let client = ImagizerClient(host: "https://example.com")
+        let url = client.buildUrl("/image.jpg", params: ["width": 100])
+        print(url)
+        let expected = "https://example.com/image.jpg?width=100"
+        XCTAssert(url.absoluteString == expected)
+    }
+    
     func testBuildUlrWithHeight() {
         let client = ImagizerClient(host: "example.com")
         let url = client.buildUrl("/image.jpg", params: ["width": 100, "height": 250])
@@ -91,6 +107,38 @@ class ImagizerSwiftTests: XCTestCase {
         }
         expected += "width=100"
     
+        XCTAssert(url.absoluteString == expected)
+    }
+    
+    func testBuildUrlWithDprOverride() {
+        let client = ImagizerClient(host: "example.com")
+        client.dpr = 2.4
+        let url = client.buildUrl("/image.jpg", params: ["width": 100, "dpr": 3.4])
+        print(url)
+        var expected = "http://example.com/image.jpg?"
+        if (self.dpr > 1) {
+            expected += "dpr=3.4&"
+        }
+        expected += "width=100"
+        
+        XCTAssert(url.absoluteString == expected)
+    }
+    
+    func testBuildurlWithDefaultQuality() {
+        let client = ImagizerClient(host: "example.com")
+        client.quality = 65
+        let url = client.buildUrl("/image.jpg", params: ["width": 100])
+        print(url)
+        let expected = "http://example.com/image.jpg?quality=65&width=100"
+        XCTAssert(url.absoluteString == expected)
+    }
+    
+    func testBuildurlWithQualityOverride() {
+        let client = ImagizerClient(host: "example.com")
+        client.quality = 65
+        let url = client.buildUrl("/image.jpg", params: ["width": 100, "quality": 55])
+        print(url)
+        let expected = "http://example.com/image.jpg?quality=55&width=100"
         XCTAssert(url.absoluteString == expected)
     }
 }
