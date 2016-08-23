@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "ImagizerSwift"
-  spec.version = "0.1.0"
+  spec.version = "0.1.1"
   spec.summary = "The official swift client for the ImagizerEngine."
   spec.homepage = "https://github.com/nventify/ImagizerSwift"
   spec.license = { type: 'APACHE', file: 'LICENSE' }
@@ -9,5 +9,7 @@ Pod::Spec.new do |spec|
   spec.platform = :ios, "9.1"
   spec.requires_arc = true
   spec.source = { git: "https://github.com/nventify/ImagizerSwift.git", tag: "v#{spec.version}", submodules: true }
-  spec.source_files = 'ImagizerSwift/*.{h,m}'
+
+  spec.requires_arc = true
+  spec.source_files = 'ImagizerSwift/*.{h,m,swift}'
 end
