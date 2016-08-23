@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
   spec.name = "ImagizerSwift"
   spec.version = "1.0.0"
-  spec.summary = "A swift SDK for the ImagizerEngine"
+  spec.summary = "The official swift client for the ImagizerEngine."
   spec.homepage = "https://github.com/nventify/ImagizerSwift"
-  spec.license = { type: 'MIT', file: 'LICENSE' }
+  spec.license = { type: 'APACHE', file: 'LICENSE' }
   spec.authors = { "Nicholas Pettas" => 'nick@nventify.com' }
 
   spec.platform = :ios, "9.1"
