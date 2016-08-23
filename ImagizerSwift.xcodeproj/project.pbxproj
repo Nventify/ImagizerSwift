@@ -11,6 +11,9 @@
 		01E7D6991D63CC6F009BB083 /* ImagizerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D6931D63C611009BB083 /* ImagizerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01E7D6D81D63E31B009BB083 /* ImagizerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */; };
 		01E7D6DA1D63E31B009BB083 /* ImagizerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D6881D63BD25009BB083 /* ImagizerSwift.framework */; };
+		01E7D6F51D6CBF63009BB083 /* ImagizerSwifttvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D6EB1D6CBF63009BB083 /* ImagizerSwifttvOS.framework */; };
+		01E7D7111D6CBF76009BB083 /* ImagizerSwiftmacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D7071D6CBF76009BB083 /* ImagizerSwiftmacOS.framework */; };
+		01E7D7201D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D71F1D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,6 +24,20 @@
 			remoteGlobalIDString = 01E7D6871D63BD25009BB083;
 			remoteInfo = ImagizerSwift;
 		};
+		01E7D6F61D6CBF63009BB083 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01E7D67F1D63BD25009BB083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01E7D6EA1D6CBF63009BB083;
+			remoteInfo = "ImagizerSwift-tvOS";
+		};
+		01E7D7121D6CBF76009BB083 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01E7D67F1D63BD25009BB083 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01E7D7061D6CBF76009BB083;
+			remoteInfo = "ImagizerSwift-macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +45,15 @@
 		01E7D6931D63C611009BB083 /* ImagizerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagizerSwift.h; path = ImagizerSwift/ImagizerSwift.h; sourceTree = SOURCE_ROOT; };
 		01E7D6951D63C61B009BB083 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImagizerSwift/Info.plist; sourceTree = SOURCE_ROOT; };
 		01E7D6971D63C831009BB083 /* ImagizerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagizerClient.swift; sourceTree = "<group>"; };
-		01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagizerSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ImagizerSwiftTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagizerSwiftTests.swift; sourceTree = "<group>"; };
 		01E7D6D91D63E31B009BB083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E7D6EB1D6CBF63009BB083 /* ImagizerSwifttvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagizerSwifttvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E7D6F41D6CBF63009BB083 /* ImagizerSwift-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ImagizerSwift-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E7D7071D6CBF76009BB083 /* ImagizerSwiftmacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagizerSwiftmacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E7D7101D6CBF76009BB083 /* ImagizerSwift-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ImagizerSwift-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E7D71E1D6CC47E009BB083 /* ImagizerSwift.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = ImagizerSwift.modulemap; sourceTree = "<group>"; };
+		01E7D71F1D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImagizerSwift-Umbrella-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +69,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E7D6DA1D63E31B009BB083 /* ImagizerSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D6E71D6CBF63009BB083 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D6F11D6CBF63009BB083 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01E7D6F51D6CBF63009BB083 /* ImagizerSwifttvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D7031D6CBF76009BB083 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D70D1D6CBF76009BB083 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01E7D7111D6CBF76009BB083 /* ImagizerSwiftmacOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +118,11 @@
 			isa = PBXGroup;
 			children = (
 				01E7D6881D63BD25009BB083 /* ImagizerSwift.framework */,
-				01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests.xctest */,
+				01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests-iOS.xctest */,
+				01E7D6EB1D6CBF63009BB083 /* ImagizerSwifttvOS.framework */,
+				01E7D6F41D6CBF63009BB083 /* ImagizerSwift-tvOSTests.xctest */,
+				01E7D7071D6CBF76009BB083 /* ImagizerSwiftmacOS.framework */,
+				01E7D7101D6CBF76009BB083 /* ImagizerSwift-macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +133,8 @@
 				01E7D6951D63C61B009BB083 /* Info.plist */,
 				01E7D6931D63C611009BB083 /* ImagizerSwift.h */,
 				01E7D6971D63C831009BB083 /* ImagizerClient.swift */,
+				01E7D71F1D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h */,
+				01E7D71E1D6CC47E009BB083 /* ImagizerSwift.modulemap */,
 			);
 			path = ImagizerSwift;
 			sourceTree = "<group>";
@@ -97,15 +156,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E7D6991D63CC6F009BB083 /* ImagizerSwift.h in Headers */,
+				01E7D7201D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D6E81D6CBF63009BB083 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D7041D6CBF76009BB083 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		01E7D6871D63BD25009BB083 /* ImagizerSwift */ = {
+		01E7D6871D63BD25009BB083 /* ImagizerSwift-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01E7D6901D63BD25009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift" */;
+			buildConfigurationList = 01E7D6901D63BD25009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-iOS" */;
 			buildPhases = (
 				01E7D6831D63BD25009BB083 /* Sources */,
 				01E7D6841D63BD25009BB083 /* Frameworks */,
@@ -116,14 +190,14 @@
 			);
 			dependencies = (
 			);
-			name = ImagizerSwift;
+			name = "ImagizerSwift-iOS";
 			productName = ImagizerSwift;
 			productReference = 01E7D6881D63BD25009BB083 /* ImagizerSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		01E7D6D41D63E31B009BB083 /* ImagizerSwiftTests */ = {
+		01E7D6D41D63E31B009BB083 /* ImagizerSwiftTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01E7D6DD1D63E31B009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwiftTests" */;
+			buildConfigurationList = 01E7D6DD1D63E31B009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwiftTests-iOS" */;
 			buildPhases = (
 				01E7D6D11D63E31B009BB083 /* Sources */,
 				01E7D6D21D63E31B009BB083 /* Frameworks */,
@@ -134,9 +208,81 @@
 			dependencies = (
 				01E7D6DC1D63E31B009BB083 /* PBXTargetDependency */,
 			);
-			name = ImagizerSwiftTests;
+			name = "ImagizerSwiftTests-iOS";
 			productName = ImagizerSwiftTests;
-			productReference = 01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests.xctest */;
+			productReference = 01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		01E7D6EA1D6CBF63009BB083 /* ImagizerSwift-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01E7D6FC1D6CBF64009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-tvOS" */;
+			buildPhases = (
+				01E7D6E61D6CBF63009BB083 /* Sources */,
+				01E7D6E71D6CBF63009BB083 /* Frameworks */,
+				01E7D6E81D6CBF63009BB083 /* Headers */,
+				01E7D6E91D6CBF63009BB083 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ImagizerSwift-tvOS";
+			productName = "ImagizerSwift-tvOS";
+			productReference = 01E7D6EB1D6CBF63009BB083 /* ImagizerSwifttvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		01E7D6F31D6CBF63009BB083 /* ImagizerSwift-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01E7D6FF1D6CBF64009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-tvOSTests" */;
+			buildPhases = (
+				01E7D6F01D6CBF63009BB083 /* Sources */,
+				01E7D6F11D6CBF63009BB083 /* Frameworks */,
+				01E7D6F21D6CBF63009BB083 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01E7D6F71D6CBF63009BB083 /* PBXTargetDependency */,
+			);
+			name = "ImagizerSwift-tvOSTests";
+			productName = "ImagizerSwift-tvOSTests";
+			productReference = 01E7D6F41D6CBF63009BB083 /* ImagizerSwift-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		01E7D7061D6CBF76009BB083 /* ImagizerSwift-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01E7D7181D6CBF76009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-macOS" */;
+			buildPhases = (
+				01E7D7021D6CBF76009BB083 /* Sources */,
+				01E7D7031D6CBF76009BB083 /* Frameworks */,
+				01E7D7041D6CBF76009BB083 /* Headers */,
+				01E7D7051D6CBF76009BB083 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ImagizerSwift-macOS";
+			productName = "ImagizerSwift-macOS";
+			productReference = 01E7D7071D6CBF76009BB083 /* ImagizerSwiftmacOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		01E7D70F1D6CBF76009BB083 /* ImagizerSwift-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01E7D71B1D6CBF76009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-macOSTests" */;
+			buildPhases = (
+				01E7D70C1D6CBF76009BB083 /* Sources */,
+				01E7D70D1D6CBF76009BB083 /* Frameworks */,
+				01E7D70E1D6CBF76009BB083 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01E7D7131D6CBF76009BB083 /* PBXTargetDependency */,
+			);
+			name = "ImagizerSwift-macOSTests";
+			productName = "ImagizerSwift-macOSTests";
+			productReference = 01E7D7101D6CBF76009BB083 /* ImagizerSwift-macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -155,6 +301,18 @@
 					01E7D6D41D63E31B009BB083 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					01E7D6EA1D6CBF63009BB083 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					01E7D6F31D6CBF63009BB083 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					01E7D7061D6CBF76009BB083 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					01E7D70F1D6CBF76009BB083 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 01E7D6821D63BD25009BB083 /* Build configuration list for PBXProject "ImagizerSwift" */;
@@ -169,8 +327,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01E7D6871D63BD25009BB083 /* ImagizerSwift */,
-				01E7D6D41D63E31B009BB083 /* ImagizerSwiftTests */,
+				01E7D6871D63BD25009BB083 /* ImagizerSwift-iOS */,
+				01E7D6EA1D6CBF63009BB083 /* ImagizerSwift-tvOS */,
+				01E7D7061D6CBF76009BB083 /* ImagizerSwift-macOS */,
+				01E7D6D41D63E31B009BB083 /* ImagizerSwiftTests-iOS */,
+				01E7D6F31D6CBF63009BB083 /* ImagizerSwift-tvOSTests */,
+				01E7D70F1D6CBF76009BB083 /* ImagizerSwift-macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +346,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		01E7D6D31D63E31B009BB083 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D6E91D6CBF63009BB083 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D6F21D6CBF63009BB083 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D7051D6CBF76009BB083 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D70E1D6CBF76009BB083 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -209,13 +399,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01E7D6E61D6CBF63009BB083 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D6F01D6CBF63009BB083 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D7021D6CBF76009BB083 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01E7D70C1D6CBF76009BB083 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		01E7D6DC1D63E31B009BB083 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01E7D6871D63BD25009BB083 /* ImagizerSwift */;
+			target = 01E7D6871D63BD25009BB083 /* ImagizerSwift-iOS */;
 			targetProxy = 01E7D6DB1D63E31B009BB083 /* PBXContainerItemProxy */;
+		};
+		01E7D6F71D6CBF63009BB083 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01E7D6EA1D6CBF63009BB083 /* ImagizerSwift-tvOS */;
+			targetProxy = 01E7D6F61D6CBF63009BB083 /* PBXContainerItemProxy */;
+		};
+		01E7D7131D6CBF76009BB083 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01E7D7061D6CBF76009BB083 /* ImagizerSwift-macOS */;
+			targetProxy = 01E7D7121D6CBF76009BB083 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -319,10 +547,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/ImagizerSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -341,10 +565,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/ImagizerSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +594,142 @@
 			};
 			name = Release;
 		};
+		01E7D6FD1D6CBF64009BB083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/ImagizerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = ImagizerSwift/ImagizerSwift.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nventify.ImagizerSwift;
+				PRODUCT_NAME = ImagizerSwifttvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		01E7D6FE1D6CBF64009BB083 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/ImagizerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = ImagizerSwift/ImagizerSwift.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nventify.ImagizerSwift;
+				PRODUCT_NAME = ImagizerSwifttvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		01E7D7001D6CBF64009BB083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ImagizerSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nventify.ImagizerSwift-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		01E7D7011D6CBF64009BB083 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ImagizerSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nventify.ImagizerSwift-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		01E7D7191D6CBF76009BB083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/ImagizerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = ImagizerSwift/ImagizerSwift.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nventify.ImagizerSwift;
+				PRODUCT_NAME = ImagizerSwiftmacOS;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		01E7D71A1D6CBF76009BB083 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/ImagizerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = ImagizerSwift/ImagizerSwift.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nventify.ImagizerSwift;
+				PRODUCT_NAME = ImagizerSwiftmacOS;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		01E7D71C1D6CBF76009BB083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ImagizerSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nventify.ImagizerSwift-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		01E7D71D1D6CBF76009BB083 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ImagizerSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nventify.ImagizerSwift-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -386,7 +742,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01E7D6901D63BD25009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift" */ = {
+		01E7D6901D63BD25009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01E7D6911D63BD25009BB083 /* Debug */,
@@ -395,11 +751,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01E7D6DD1D63E31B009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwiftTests" */ = {
+		01E7D6DD1D63E31B009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwiftTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01E7D6DE1D63E31B009BB083 /* Debug */,
 				01E7D6DF1D63E31B009BB083 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01E7D6FC1D6CBF64009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01E7D6FD1D6CBF64009BB083 /* Debug */,
+				01E7D6FE1D6CBF64009BB083 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01E7D6FF1D6CBF64009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01E7D7001D6CBF64009BB083 /* Debug */,
+				01E7D7011D6CBF64009BB083 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01E7D7181D6CBF76009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01E7D7191D6CBF76009BB083 /* Debug */,
+				01E7D71A1D6CBF76009BB083 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01E7D71B1D6CBF76009BB083 /* Build configuration list for PBXNativeTarget "ImagizerSwift-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01E7D71C1D6CBF76009BB083 /* Debug */,
+				01E7D71D1D6CBF76009BB083 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,6 @@
+framework module ImagizerSwift {
+    umbrella header "ImagizerSwift-Umbrella-Header.h"
+
+    export *
+    module * { export * }
+}
