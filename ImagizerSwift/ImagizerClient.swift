@@ -32,7 +32,7 @@ public class ImagizerClient {
         var localParams = params
         components.scheme = useHttps ? "https" : "http"
         components.host = self.host
-        components.path = path
+        components.path = self.cleanPath(path)
         
         // determine the device pixel ratio
         // by default Imagizer uses 1, so no need to pass 1
@@ -50,6 +50,16 @@ public class ImagizerClient {
         }
         
         return components.URL!
+    }
+    
+    private func cleanPath(path: String) -> String {
+        var path = path
+        
+        if !path.hasPrefix("/") {
+            path = "/" + path
+        }
+        
+        return path
     }
     
     private func handleQuery(params:[String: AnyObject]) -> [NSURLQueryItem] {

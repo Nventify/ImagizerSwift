@@ -22,6 +22,14 @@ class ImagizerSwiftTests: XCTestCase {
     
     func testBuildUrl() {
         let client = ImagizerClient(host: "example.com")
+        let url = client.buildUrl("image.jpg", params: ["width": 100])
+        print(url)
+        let expected = "http://example.com/image.jpg?width=100"
+        XCTAssert(url.absoluteString == expected)
+    }
+    
+    func testBuildUrlWithSlash() {
+        let client = ImagizerClient(host: "example.com")
         let url = client.buildUrl("/image.jpg", params: ["width": 100])
         print(url)
         let expected = "http://example.com/image.jpg?width=100"
@@ -30,7 +38,7 @@ class ImagizerSwiftTests: XCTestCase {
     
     func testBuildUrlHttps() {
         let client = ImagizerClient(host: "example.com", useHttps: true)
-        let url = client.buildUrl("/image.jpg", params: ["width": 100])
+        let url = client.buildUrl("image.jpg", params: ["width": 100])
         print(url)
         let expected = "https://example.com/image.jpg?width=100"
         XCTAssert(url.absoluteString == expected)
@@ -38,7 +46,7 @@ class ImagizerSwiftTests: XCTestCase {
     
     func testBuildUlrWithHeight() {
         let client = ImagizerClient(host: "example.com")
-        let url = client.buildUrl("/image.jpg", params: ["width": 100, "height": 250])
+        let url = client.buildUrl("image.jpg", params: ["width": 100, "height": 250])
         print(url)
         let expected = "http://example.com/image.jpg?height=250&width=100"
         XCTAssert(url.absoluteString == expected)
@@ -46,7 +54,7 @@ class ImagizerSwiftTests: XCTestCase {
     
     func testBuildUlrWithHeightAndCropFit() {
         let client = ImagizerClient(host: "example.com")
-        let url = client.buildUrl("/image.jpg", params: ["width": 100, "height": 250, "crop": "fit"])
+        let url = client.buildUrl("image.jpg", params: ["width": 100, "height": 250, "crop": "fit"])
         print(url)
         let expected = "http://example.com/image.jpg?crop=fit&height=250&width=100"
         XCTAssert(url.absoluteString == expected)
@@ -54,7 +62,7 @@ class ImagizerSwiftTests: XCTestCase {
     
     func testBuildUlrWithCustomCrop() {
         let client = ImagizerClient(host: "example.com")
-        let url = client.buildUrl("/image.jpg", params: ["crop": "100,100,100,50"])
+        let url = client.buildUrl("image.jpg", params: ["crop": "100,100,100,50"])
         print(url)
         let expected = "http://example.com/image.jpg?crop=100,100,100,50"
         XCTAssert(url.absoluteString == expected)
@@ -63,7 +71,7 @@ class ImagizerSwiftTests: XCTestCase {
     func testBuildUrlWithAutoDpr() {
         let client = ImagizerClient(host: "example.com")
         client.autoDpr = true
-        let url = client.buildUrl("/image.jpg", params: ["width": 100])
+        let url = client.buildUrl("image.jpg", params: ["width": 100])
         print(url)
         var expected = "http://example.com/image.jpg?"
         if (self.dpr > 1) {
@@ -77,7 +85,7 @@ class ImagizerSwiftTests: XCTestCase {
     
     func testBuildUrlWithDpr() {
         let client = ImagizerClient(host: "example.com")
-        let url = client.buildUrl("/image.jpg", params: ["width": 100, "dpr": 2.5])
+        let url = client.buildUrl("image.jpg", params: ["width": 100, "dpr": 2.5])
         print(url)
         var expected = "http://example.com/image.jpg?"
         if (self.dpr > 1) {
@@ -91,7 +99,7 @@ class ImagizerSwiftTests: XCTestCase {
     func testBuildUrlWithDefaultDpr() {
         let client = ImagizerClient(host: "example.com")
         client.dpr = 2.4
-        let url = client.buildUrl("/image.jpg", params: ["width": 100])
+        let url = client.buildUrl("image.jpg", params: ["width": 100])
         print(url)
         var expected = "http://example.com/image.jpg?"
         if (self.dpr > 1) {
@@ -105,7 +113,7 @@ class ImagizerSwiftTests: XCTestCase {
     func testBuildUrlWithDprOverride() {
         let client = ImagizerClient(host: "example.com")
         client.dpr = 2.4
-        let url = client.buildUrl("/image.jpg", params: ["width": 100, "dpr": 3.4])
+        let url = client.buildUrl("image.jpg", params: ["width": 100, "dpr": 3.4])
         print(url)
         var expected = "http://example.com/image.jpg?"
         if (self.dpr > 1) {
@@ -119,7 +127,7 @@ class ImagizerSwiftTests: XCTestCase {
     func testBuildurlWithDefaultQuality() {
         let client = ImagizerClient(host: "example.com")
         client.quality = 65
-        let url = client.buildUrl("/image.jpg", params: ["width": 100])
+        let url = client.buildUrl("image.jpg", params: ["width": 100])
         print(url)
         let expected = "http://example.com/image.jpg?quality=65&width=100"
         XCTAssert(url.absoluteString == expected)
@@ -128,7 +136,7 @@ class ImagizerSwiftTests: XCTestCase {
     func testBuildurlWithQualityOverride() {
         let client = ImagizerClient(host: "example.com")
         client.quality = 65
-        let url = client.buildUrl("/image.jpg", params: ["width": 100, "quality": 55])
+        let url = client.buildUrl("image.jpg", params: ["width": 100, "quality": 55])
         print(url)
         let expected = "http://example.com/image.jpg?quality=55&width=100"
         XCTAssert(url.absoluteString == expected)
