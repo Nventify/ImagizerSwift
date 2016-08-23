@@ -11,7 +11,6 @@
 		01E7D6991D63CC6F009BB083 /* ImagizerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D6931D63C611009BB083 /* ImagizerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01E7D6D81D63E31B009BB083 /* ImagizerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */; };
 		01E7D6DA1D63E31B009BB083 /* ImagizerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D6881D63BD25009BB083 /* ImagizerSwift.framework */; };
-		01E7D6E51D6BC24A009BB083 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6E41D6BC24A009BB083 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +31,6 @@
 		01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagizerSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagizerSwiftTests.swift; sourceTree = "<group>"; };
 		01E7D6D91D63E31B009BB083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01E7D6E41D6BC24A009BB083 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +76,6 @@
 				01E7D6951D63C61B009BB083 /* Info.plist */,
 				01E7D6931D63C611009BB083 /* ImagizerSwift.h */,
 				01E7D6971D63C831009BB083 /* ImagizerClient.swift */,
-				01E7D6E41D6BC24A009BB083 /* Config.swift */,
 			);
 			path = ImagizerSwift;
 			sourceTree = "<group>";
@@ -114,7 +111,6 @@
 				01E7D6841D63BD25009BB083 /* Frameworks */,
 				01E7D6851D63BD25009BB083 /* Headers */,
 				01E7D6861D63BD25009BB083 /* Resources */,
-				01E7D6E01D64080E009BB083 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,7 +128,6 @@
 				01E7D6D11D63E31B009BB083 /* Sources */,
 				01E7D6D21D63E31B009BB083 /* Frameworks */,
 				01E7D6D31D63E31B009BB083 /* Resources */,
-				01E7D6E11D640873009BB083 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -203,7 +198,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E7D6981D63C831009BB083 /* ImagizerClient.swift in Sources */,
-				01E7D6E51D6BC24A009BB083 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

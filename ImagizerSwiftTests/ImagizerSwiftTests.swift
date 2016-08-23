@@ -28,16 +28,8 @@ class ImagizerSwiftTests: XCTestCase {
         XCTAssert(url.absoluteString == expected)
     }
     
-    func testBuildUrlHttp() {
-        let client = ImagizerClient(host: "http://example.com")
-        let url = client.buildUrl("/image.jpg", params: ["width": 100])
-        print(url)
-        let expected = "http://example.com/image.jpg?width=100"
-        XCTAssert(url.absoluteString == expected)
-    }
-    
     func testBuildUrlHttps() {
-        let client = ImagizerClient(host: "https://example.com")
+        let client = ImagizerClient(host: "example.com", useHttps: true)
         let url = client.buildUrl("/image.jpg", params: ["width": 100])
         print(url)
         let expected = "https://example.com/image.jpg?width=100"

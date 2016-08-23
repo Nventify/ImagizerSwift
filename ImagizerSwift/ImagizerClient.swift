@@ -8,25 +8,22 @@
 import Foundation
 
 public class ImagizerClient {
+    private static let defaultQuality = 90
+    private static let defaultDpr = 1.0
+    
     private var host:String
     private var useHttps:Bool = false
     public var autoDpr:Bool = false
-    public var dpr:Double = Config.defaultDpr
-    public var quality:Int = Config.defaultQuality
+    public var dpr:Double = defaultDpr
+    public var quality:Int = defaultQuality
     
     public init(host: String) {
-        // parse as NSURL to find if a scheme was passed
-        // if not scheme was found use default http
-        if let url = NSURL(string: host) {
-            if url.scheme == "https" {
-                self.useHttps = true
-            }
-            
-            self.host = url.absoluteString.stringByReplacingOccurrencesOfString(url.scheme + "://", withString: "")
-            
-        } else {
-            self.host = host
-        }
+        self.host = host
+    }
+    
+    public init(host: String, useHttps: Bool) {
+        self.host = host
+        self.useHttps = useHttps
     }
     
     public func buildUrl(path:String, params: [String: AnyObject]) -> NSURL {
@@ -40,11 +37,11 @@ public class ImagizerClient {
         // determine the device pixel ratio
         // by default Imagizer uses 1, so no need to pass 1
         let dpr = (self.getScreenMultiplier())
-        if localParams["dpr"] == nil && dpr != Config.defaultDpr {
+        if localParams["dpr"] == nil && dpr != ImagizerClient.defaultDpr {
             localParams["dpr"] = String(format: "%g", dpr)
         }
         
-        if localParams["quality"] == nil && self.quality != Config.defaultQuality {
+        if localParams["quality"] == nil && self.quality != ImagizerClient.defaultQuality {
             localParams["quality"] = self.quality
         }
 
