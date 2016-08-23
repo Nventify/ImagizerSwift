@@ -56,11 +56,7 @@ public class ImagizerClient {
     }
     
     private func handleQuery(params:[String: AnyObject]) -> [NSURLQueryItem] {
-        var urlParams = [NSURLQueryItem]()
-        
-        for (name, value) in params {
-            urlParams.append(NSURLQueryItem(name: name, value: String(value)))
-        }
+        var urlParams = params.map { NSURLQueryItem(name:$0, value:String($1))}
         
         // sort array to ensure consistence results
         // for caching on imagizer and unit tests
