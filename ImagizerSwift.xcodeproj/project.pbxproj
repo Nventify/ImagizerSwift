@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		01E7D6981D63C831009BB083 /* ImagizerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6971D63C831009BB083 /* ImagizerClient.swift */; };
-		01E7D6991D63CC6F009BB083 /* ImagizerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D6931D63C611009BB083 /* ImagizerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01E7D6991D63CC6F009BB083 /* ImagizerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D6931D63C611009BB083 /* ImagizerSwift.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		01E7D6D81D63E31B009BB083 /* ImagizerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */; };
 		01E7D6DA1D63E31B009BB083 /* ImagizerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D6881D63BD25009BB083 /* ImagizerSwift.framework */; };
-		01E7D6F51D6CBF63009BB083 /* ImagizerSwifttvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D6EB1D6CBF63009BB083 /* ImagizerSwifttvOS.framework */; };
-		01E7D7111D6CBF76009BB083 /* ImagizerSwiftmacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D7071D6CBF76009BB083 /* ImagizerSwiftmacOS.framework */; };
+		01E7D6F51D6CBF63009BB083 /* ImagizerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D6EB1D6CBF63009BB083 /* ImagizerSwift.framework */; };
 		01E7D7201D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D71F1D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h */; };
+		01E7D7781D6D0ABE009BB083 /* ImagizerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */; };
+		01E7D7791D6D0ABF009BB083 /* ImagizerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */; };
+		01E7D77A1D6D111D009BB083 /* ImagizerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6971D63C831009BB083 /* ImagizerClient.swift */; };
+		01E7D77B1D6D1138009BB083 /* ImagizerSwift-Umbrella-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D71F1D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		01E7D77C1D6D11C1009BB083 /* ImagizerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7D6881D63BD25009BB083 /* ImagizerSwift.framework */; };
+		01E7D77F1D6D18F6009BB083 /* ImagizerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7D6971D63C831009BB083 /* ImagizerClient.swift */; };
+		01E7D7801D6D18FC009BB083 /* ImagizerSwift-Umbrella-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D71F1D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		01E7D7811D6D191C009BB083 /* ImagizerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D6931D63C611009BB083 /* ImagizerSwift.h */; };
+		01E7D7821D6D1926009BB083 /* ImagizerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E7D6931D63C611009BB083 /* ImagizerSwift.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +56,9 @@
 		01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ImagizerSwiftTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E7D6D71D63E31B009BB083 /* ImagizerSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagizerSwiftTests.swift; sourceTree = "<group>"; };
 		01E7D6D91D63E31B009BB083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01E7D6EB1D6CBF63009BB083 /* ImagizerSwifttvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagizerSwifttvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E7D6EB1D6CBF63009BB083 /* ImagizerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagizerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E7D6F41D6CBF63009BB083 /* ImagizerSwift-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ImagizerSwift-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01E7D7071D6CBF76009BB083 /* ImagizerSwiftmacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagizerSwiftmacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E7D7071D6CBF76009BB083 /* ImagizerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagizerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E7D7101D6CBF76009BB083 /* ImagizerSwift-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ImagizerSwift-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E7D71E1D6CC47E009BB083 /* ImagizerSwift.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = ImagizerSwift.modulemap; sourceTree = "<group>"; };
 		01E7D71F1D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImagizerSwift-Umbrella-Header.h"; sourceTree = "<group>"; };
@@ -83,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E7D6F51D6CBF63009BB083 /* ImagizerSwifttvOS.framework in Frameworks */,
+				01E7D6F51D6CBF63009BB083 /* ImagizerSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E7D7111D6CBF76009BB083 /* ImagizerSwiftmacOS.framework in Frameworks */,
+				01E7D77C1D6D11C1009BB083 /* ImagizerSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +127,9 @@
 			children = (
 				01E7D6881D63BD25009BB083 /* ImagizerSwift.framework */,
 				01E7D6D51D63E31B009BB083 /* ImagizerSwiftTests-iOS.xctest */,
-				01E7D6EB1D6CBF63009BB083 /* ImagizerSwifttvOS.framework */,
+				01E7D6EB1D6CBF63009BB083 /* ImagizerSwift.framework */,
 				01E7D6F41D6CBF63009BB083 /* ImagizerSwift-tvOSTests.xctest */,
-				01E7D7071D6CBF76009BB083 /* ImagizerSwiftmacOS.framework */,
+				01E7D7071D6CBF76009BB083 /* ImagizerSwift.framework */,
 				01E7D7101D6CBF76009BB083 /* ImagizerSwift-macOSTests.xctest */,
 			);
 			name = Products;
@@ -164,6 +172,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E7D7801D6D18FC009BB083 /* ImagizerSwift-Umbrella-Header.h in Headers */,
+				01E7D7811D6D191C009BB083 /* ImagizerSwift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +181,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E7D77B1D6D1138009BB083 /* ImagizerSwift-Umbrella-Header.h in Headers */,
+				01E7D7821D6D1926009BB083 /* ImagizerSwift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +240,7 @@
 			);
 			name = "ImagizerSwift-tvOS";
 			productName = "ImagizerSwift-tvOS";
-			productReference = 01E7D6EB1D6CBF63009BB083 /* ImagizerSwifttvOS.framework */;
+			productReference = 01E7D6EB1D6CBF63009BB083 /* ImagizerSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		01E7D6F31D6CBF63009BB083 /* ImagizerSwift-tvOSTests */ = {
@@ -264,7 +276,7 @@
 			);
 			name = "ImagizerSwift-macOS";
 			productName = "ImagizerSwift-macOS";
-			productReference = 01E7D7071D6CBF76009BB083 /* ImagizerSwiftmacOS.framework */;
+			productReference = 01E7D7071D6CBF76009BB083 /* ImagizerSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		01E7D70F1D6CBF76009BB083 /* ImagizerSwift-macOSTests */ = {
@@ -403,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E7D77F1D6D18F6009BB083 /* ImagizerClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E7D7781D6D0ABE009BB083 /* ImagizerSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E7D77A1D6D111D009BB083 /* ImagizerClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E7D7791D6D0ABF009BB083 /* ImagizerSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +622,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = ImagizerSwift/ImagizerSwift.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nventify.ImagizerSwift;
-				PRODUCT_NAME = ImagizerSwifttvOS;
+				PRODUCT_NAME = ImagizerSwift;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -626,7 +642,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = ImagizerSwift/ImagizerSwift.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nventify.ImagizerSwift;
-				PRODUCT_NAME = ImagizerSwifttvOS;
+				PRODUCT_NAME = ImagizerSwift;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -674,7 +690,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MODULEMAP_FILE = ImagizerSwift/ImagizerSwift.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nventify.ImagizerSwift;
-				PRODUCT_NAME = ImagizerSwiftmacOS;
+				PRODUCT_NAME = ImagizerSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -696,7 +712,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MODULEMAP_FILE = ImagizerSwift/ImagizerSwift.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nventify.ImagizerSwift;
-				PRODUCT_NAME = ImagizerSwiftmacOS;
+				PRODUCT_NAME = ImagizerSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -713,6 +729,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nventify.ImagizerSwift-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = ImagizerSwift.h;
 			};
 			name = Debug;
 		};
@@ -727,6 +744,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nventify.ImagizerSwift-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = ImagizerSwift.h;
 			};
 			name = Release;
 		};

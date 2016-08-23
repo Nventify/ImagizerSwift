@@ -6,7 +6,8 @@ Pod::Spec.new do |spec|
   spec.license = { type: 'APACHE', file: 'LICENSE' }
   spec.authors = { "Nicholas Pettas" => 'nick@nventify.com' }
 
-  spec.platform = :ios, "9.1"
+  spec.platforms = { :ios => "9.2", :osx => "10.10", :tvos => "9.2" }
+
   spec.requires_arc = true
   spec.source = { git: "https://github.com/nventify/ImagizerSwift.git", tag: "v#{spec.version}", submodules: true }
 

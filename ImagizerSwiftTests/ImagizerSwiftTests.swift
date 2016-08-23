@@ -9,11 +9,17 @@ import XCTest
 import ImagizerSwift
 
 class ImagizerSwiftTests: XCTestCase {
-    private var dpr:Int = 0
+    private var dpr:Double = 0
     
     override func setUp() {
         super.setUp()
-        self.dpr = Int(UIScreen.mainScreen().scale)
+        #if os(OSX)
+            if let screen = NSScreen.mainScreen() {
+                self.dpr = Double(screen.backingScaleFactor)
+            }
+        #else
+            self.dpr = Double(UIScreen.mainScreen().scale)
+        #endif
     }
     
     override func tearDown() {
@@ -75,7 +81,7 @@ class ImagizerSwiftTests: XCTestCase {
         print(url)
         var expected = "http://example.com/image.jpg?"
         if (self.dpr > 1) {
-            expected += "dpr=\(self.dpr)&"
+            expected += "dpr=" + String(format: "%g", dpr) + "&"
         }
         
         expected += "width=100"
@@ -87,12 +93,7 @@ class ImagizerSwiftTests: XCTestCase {
         let client = ImagizerClient(host: "example.com")
         let url = client.buildUrl("image.jpg", params: ["width": 100, "dpr": 2.5])
         print(url)
-        var expected = "http://example.com/image.jpg?"
-        if (self.dpr > 1) {
-            expected += "dpr=2.5&"
-        }
-        expected += "width=100"
-        
+        let expected = "http://example.com/image.jpg?dpr=2.5&width=100"
         XCTAssert(url.absoluteString == expected)
     }
     
@@ -101,12 +102,7 @@ class ImagizerSwiftTests: XCTestCase {
         client.dpr = 2.4
         let url = client.buildUrl("image.jpg", params: ["width": 100])
         print(url)
-        var expected = "http://example.com/image.jpg?"
-        if (self.dpr > 1) {
-            expected += "dpr=2.4&"
-        }
-        expected += "width=100"
-    
+        let expected = "http://example.com/image.jpg?dpr=2.4&width=100"
         XCTAssert(url.absoluteString == expected)
     }
     
@@ -115,12 +111,7 @@ class ImagizerSwiftTests: XCTestCase {
         client.dpr = 2.4
         let url = client.buildUrl("image.jpg", params: ["width": 100, "dpr": 3.4])
         print(url)
-        var expected = "http://example.com/image.jpg?"
-        if (self.dpr > 1) {
-            expected += "dpr=3.4&"
-        }
-        expected += "width=100"
-        
+        let expected = "http://example.com/image.jpg?dpr=3.4&width=100"
         XCTAssert(url.absoluteString == expected)
     }
     
