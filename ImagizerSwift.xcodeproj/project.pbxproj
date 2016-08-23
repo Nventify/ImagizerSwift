@@ -130,11 +130,11 @@
 		01E7D68A1D63BD25009BB083 /* ImagizerSwift */ = {
 			isa = PBXGroup;
 			children = (
-				01E7D6951D63C61B009BB083 /* Info.plist */,
 				01E7D6931D63C611009BB083 /* ImagizerSwift.h */,
 				01E7D6971D63C831009BB083 /* ImagizerClient.swift */,
 				01E7D71F1D6CC4BE009BB083 /* ImagizerSwift-Umbrella-Header.h */,
 				01E7D71E1D6CC47E009BB083 /* ImagizerSwift.modulemap */,
+				01E7D6951D63C61B009BB083 /* Info.plist */,
 			);
 			path = ImagizerSwift;
 			sourceTree = "<group>";
