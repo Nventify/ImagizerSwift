@@ -3,8 +3,11 @@ The official Swift client for the ImagizerEngine
 
 ## Installation for Cocoapods
 ```ruby
-# For latest release in cocoapods
-pod 'ImagizerSwift'
+use_frameworks!
+
+target 'MyApp' do
+  pod 'ImagizerSwift'
+end
 ```
 ## Usage
 
