@@ -1,7 +1,7 @@
 # ImagizerSwift
 The official Swift client for the ImagizerEngine
 
-## Installation for Cocoapods
+## Installation for [Cocoapods](https://github.com/CocoaPods/CocoaPods)
 ```ruby
 use_frameworks!
 
@@ -9,6 +9,12 @@ target 'MyApp' do
   pod 'ImagizerSwift'
 end
 ```
+
+## Installation for [Carthage](https://github.com/Carthage/Carthage)
+```
+github "Nventify/ImagizerSwift"
+```
+
 ## Usage
 
 ```swift
