@@ -29,7 +29,7 @@ let imagizerClient = ImagizerClient(host: "example.com")
 
 // Enable Auto device pixel ratio setting.
 // Device pixel ratio will now be detected
-// and automatially applied to image urls
+// and automatically applied to image urls
 imagizerClient.autoDpr = true
 
 // Build a URL with resize and cropping params
