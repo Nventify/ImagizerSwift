@@ -132,4 +132,22 @@ class ImagizerSwiftTests: XCTestCase {
         let expected = "http://example.com/image.jpg?quality=55&width=100"
         XCTAssert(url.absoluteString == expected)
     }
+    
+    func testBuildUrlWithDemoHost() {
+        let client = ImagizerClient()
+        client.originImageHost = "example.com"
+        let url = client.buildUrl("image.jpg", params: ["width": 100])
+        print(url)
+        let expected = "http://demo.imagizercdn.com/image.jpg?hostname=example.com&width=100"
+        XCTAssert(url.absoluteString == expected)
+    }
+    
+    func testBuildUrlWithDemoHostWithScheme() {
+        let client = ImagizerClient()
+        client.originImageHost = "https://example.com"
+        let url = client.buildUrl("image.jpg", params: ["width": 100])
+        print(url)
+        let expected = "http://demo.imagizercdn.com/image.jpg?hostname=https://example.com&width=100"
+        XCTAssert(url.absoluteString == expected)
+    }
 }

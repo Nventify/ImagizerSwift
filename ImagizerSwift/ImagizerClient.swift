@@ -11,16 +11,23 @@ import AppKit
 #else
 import UIKit
 #endif
+import SystemConfiguration
 
 @objc public class ImagizerClient: NSObject {
     private static let defaultQuality = 90
     private static let defaultDpr = 1.0
+    private static let defaultImagizerHost = "demo.imagizercdn.com";
     
     private var host:String
     private var useHttps:Bool = false
     public var autoDpr:Bool = false
     public var dpr:Double = defaultDpr
     public var quality:Int = defaultQuality
+    public var originImageHost:String?
+    
+    public override init() {
+        self.host = ImagizerClient.defaultImagizerHost
+    }
     
     public init(host: String) {
         self.host = host
@@ -42,6 +49,10 @@ import UIKit
         components.scheme = useHttps ? "https" : "http"
         components.host = self.host
         components.path = self.cleanPath(path)
+        
+        if originImageHost != nil {
+            localParams["hostname"] = originImageHost
+        }
         
         // determine the device pixel ratio
         // by default Imagizer uses 1, so no need to pass 1
