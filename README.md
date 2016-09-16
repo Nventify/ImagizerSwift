@@ -19,8 +19,42 @@ github "Nventify/ImagizerSwift"
 ```
 
 ## Usage
+Using the free to test Imagizer Demo Service
 
 ```swift
+// Import the ImagizerSwift framework
+import ImagizerSwift
+
+// Initialize the Imagizer Client
+let imagizerClient = ImagizerClient()
+
+// Since we are using Imagizer Engine Demo Service
+// we'll need to specify our Image storage origin
+// Imagizer will fetch your images from this endpoint
+imagizerClient.setOriginHost("example.com")
+
+// Enable Auto device pixel ratio setting.
+// Device pixel ratio will now be detected
+// and automatically applied to image urls
+imagizerClient.autoDpr = true
+
+// Build a URL with resize and cropping params
+// http://example.com/image.jpg?width=400&height=400&crop=fit&dpr=2&hostname=example.com
+let imageUrl1 = imagizerClient.buildUrl("image.jpg", params: [
+  "width": 400, 
+  "height": 500,
+  "crop": "fit"
+])
+
+// Build url with compression 
+// http://example.com/image.jpg?quality=55&hostname=example.com
+let imageUrl2 = imagizerClient.buildUrl("image.jpg", params: [
+  "quality": 55
+])
+```
+
+Using your own Imagizer Instance
+``` swift
 // Import the ImagizerSwift framework
 import ImagizerSwift
 
@@ -45,6 +79,5 @@ let imageUrl1 = imagizerClient.buildUrl("image.jpg", params: [
 let imageUrl2 = imagizerClient.buildUrl("image.jpg", params: [
   "quality": 55
 ])
-
-
 ```
+
