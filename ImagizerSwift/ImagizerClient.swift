@@ -13,17 +13,17 @@ import UIKit
 #endif
 import SystemConfiguration
 
-@objc public class ImagizerClient: NSObject {
-    private static let defaultQuality = 90
-    private static let defaultDpr = 1.0
-    private static let defaultImagizerHost = "demo.imagizercdn.com";
+@objc open class ImagizerClient: NSObject {
+    fileprivate static let defaultQuality = 90
+    fileprivate static let defaultDpr = 1.0
+    fileprivate static let defaultImagizerHost = "demo.imagizercdn.com";
     
-    private var host:String
-    private var useHttps:Bool = false
-    public var autoDpr:Bool = false
-    public var dpr:Double = defaultDpr
-    public var quality:Int = defaultQuality
-    public var originImageHost:String?
+    open var host:String
+    open var useHttps:Bool = false
+    open var autoDpr:Bool = false
+    open var dpr:Double = defaultDpr
+    open var quality:Int = defaultQuality
+    open var originImageHost:String?
     
     public override init() {
         self.host = ImagizerClient.defaultImagizerHost
@@ -38,12 +38,12 @@ import SystemConfiguration
         self.useHttps = useHttps
     }
     
-    public func buildUrl(path:String) -> NSURL {
+    open func buildUrl(_ path:String) -> URL {
         return self.buildUrl(path, params: [:])
     }
     
-    public func buildUrl(path:String, params: NSDictionary) -> NSURL {
-        let components = NSURLComponents.init()
+    open func buildUrl(_ path:String, params: NSDictionary) -> URL {
+        var components = URLComponents.init()
         let localParams: NSMutableDictionary = NSMutableDictionary.init(dictionary: params)
 
         components.scheme = useHttps ? "https" : "http"
@@ -71,10 +71,10 @@ import SystemConfiguration
             components.queryItems = self.handleQuery(localParams)
         }
         
-        return components.URL!
+        return components.url!
     }
     
-    private func cleanPath(path: String) -> String {
+    fileprivate func cleanPath(_ path: String) -> String {
         var path = path
         
         if !path.hasPrefix("/") {
@@ -84,26 +84,26 @@ import SystemConfiguration
         return path
     }
     
-    private func handleQuery(params:NSDictionary) -> [NSURLQueryItem] {
-        var urlParams = params.map { NSURLQueryItem(name:String($0), value:String($1))}
+    fileprivate func handleQuery(_ params:NSDictionary) -> [URLQueryItem] {
+        var urlParams = params.map { URLQueryItem(name:String(describing: $0), value:String(describing: $1))}
         
         // sort array to ensure consistence results
         // for caching on imagizer and unit tests
-        urlParams.sortInPlace{ $0.name < $1.name }
+        urlParams.sort{ $0.name < $1.name }
         
         return urlParams
     }
     
-    private func getScreenMultiplier() -> Double {
+    fileprivate func getScreenMultiplier() -> Double {
         var dpr =  self.dpr
         
         if self.autoDpr {
             #if os(OSX)
-                if let screen = NSScreen.mainScreen() {
+                if let screen = NSScreen.main() {
                     dpr = Double(screen.backingScaleFactor)
                 }
             #elseif os(iOS)
-                dpr = Double(UIScreen.mainScreen().scale)
+                dpr = Double(UIScreen.main.scale)
             #endif
         }
         

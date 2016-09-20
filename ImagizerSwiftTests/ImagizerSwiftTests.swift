@@ -9,16 +9,16 @@ import XCTest
 import ImagizerSwift
 
 class ImagizerSwiftTests: XCTestCase {
-    private var dpr:Double = 0
+    fileprivate var dpr:Double = 0
     
     override func setUp() {
         super.setUp()
         #if os(OSX)
-            if let screen = NSScreen.mainScreen() {
+            if let screen = NSScreen.main() {
                 self.dpr = Double(screen.backingScaleFactor)
             }
         #else
-            self.dpr = Double(UIScreen.mainScreen().scale)
+            self.dpr = Double(UIScreen.main.scale)
         #endif
     }
     
