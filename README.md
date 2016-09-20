@@ -31,7 +31,7 @@ let imagizerClient = ImagizerClient()
 // Since we are using Imagizer Engine Demo Service
 // we'll need to specify our Image storage origin
 // Imagizer will fetch your images from this endpoint
-imagizerClient.setOriginHost("example.com")
+imagizerClient.originImageHost = "example.com"
 
 // Enable Auto device pixel ratio setting.
 // Device pixel ratio will now be detected
